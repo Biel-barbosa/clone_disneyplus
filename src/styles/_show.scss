@@ -9,6 +9,10 @@
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+        
+        @media (max-width: 768px){
+            grid-template-columns: 1fr 1fr
+        }
 
         &--is-active{
             display: grid;
@@ -27,6 +31,12 @@
         display: flex;
         justify-content: center;
 
+        @media(max-width:768px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 20px;
+        }
+
         &__button{
             border: 1px solid transparent;
             color: variaveis.$corTextoSecundario;
@@ -39,6 +49,10 @@
 
             &--is-active{
                 border-bottom: 1px solid variaveis.$corTextoSecundario;
+            }
+
+            @media(max-width:768px){
+                font-size: 16px;
             }
         }
     }
